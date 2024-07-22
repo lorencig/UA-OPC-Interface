@@ -146,6 +146,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - [OPC UA](https://opcfoundation.org/about/opc-technologies/opc-ua/) - Foundation for interoperability standard.
 
+## Disclaimer
+
+- This software is separated from the author's research and activity roles at their own institutions.
 ---
 
 ![Python](https://img.shields.io/badge/python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white)
