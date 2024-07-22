@@ -15,10 +15,12 @@ pumpA = client.get_node("ns=1;i=1001")
 pumpB = client.get_node("ns=1;i=1002")
 
 # Define default method nodes
-pump = client.get_node("ns=2;i=2001")
-stop = client.get_node("ns=2;i=2002")
-empty = client.get_node("ns=2;i=2003")
-fill = client.get_node("ns=2;i=2004")
+methods = {
+    "Pump": client.get_node("ns=2;i=2001"),
+    "Stop": client.get_node("ns=2;i=2002"),
+    "Empty": client.get_node("ns=2;i=2003"),
+    "Fill": client.get_node("ns=2;i=2004")
+}
 
 # Event to control the execution flow
 stop_event = threading.Event()
@@ -87,12 +89,12 @@ def run_program():
                     break
                 time.sleep(1)
         else:
-            method_node = eval(action.lower())
+            method_node = methods.get(action)
             pump_name = "Pump A" if pump_node == pumpA else "Pump B" if pump_node == pumpB else ""
             try:
                 status_label.config(text=f"Executing: {action} on {pump_name} with value {value}")
                 if action == "Stop":
-                    pump_node.call_method(stop)
+                    pump_node.call_method(method_node)
                 else:
                     input_arg = [ua.Variant(value, ua.VariantType.UInt16)]
                     pump_node.call_method(method_node, *input_arg)
