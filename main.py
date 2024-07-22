@@ -88,8 +88,9 @@ def run_program():
                 time.sleep(1)
         else:
             method_node = eval(action.lower())
+            pump_name = "Pump A" if pump_node == pumpA else "Pump B" if pump_node == pumpB else ""
             try:
-                status_label.config(text=f"Executing: {action} with value {value}")
+                status_label.config(text=f"Executing: {action} on {pump_name} with value {value}")
                 if action == "Stop":
                     pump_node.call_method(stop)
                 else:
@@ -99,7 +100,7 @@ def run_program():
                 status_label.config(text=f"Error: {e}")
                 break
     status_label.config(text="Program finished")
-
+    
 # Create the main window
 root = tk.Tk()
 root.title("UA OPC Interface")
@@ -184,7 +185,7 @@ btn_empty_b.grid(row=1, column=1, padx=(5, 5), pady=(5, 5), sticky="nsew")
 #Separator
 separator = ttk.Separator(root, orient='vertical')
 separator.grid(row=2, column=2, padx=75)
-separator = ttk.Separator(root, orient='vertical')
+separator = ttk.Separator(root, orient='vertical')    
 separator.grid(row=4, column=2, padx=75)
 
 # Create additional buttons
@@ -196,14 +197,6 @@ btn_submit.grid(row=5, column=0, columnspan=6, padx=(10, 10), pady=(10, 10), sti
 
 btn_clear = ttk.Button(root, text="Clear", command=clear_program, image=clean_icon_resized, compound=tk.TOP)
 btn_clear.grid(row=4, column=3, columnspan=2, padx=(10, 10), pady=(10, 10), sticky="nsew")
-
-# Configure grid weight
-root.grid_columnconfigure(0, weight=1)
-root.grid_columnconfigure(1, weight=1)
-root.grid_columnconfigure(2, weight=1)
-root.grid_columnconfigure(3, weight=1)
-root.grid_columnconfigure(4, weight=1)
-root.grid_rowconfigure(1, weight=1)
 
 # Apply the theme
 style = Style(theme='darkly')
