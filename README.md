@@ -1,5 +1,7 @@
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5f4b65ad57974089b10b5010906a361f)](https://app.codacy.com/gh/lorencig/UA-OPC-Interface/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![DOI](https://zenodo.org/badge/832139320.svg)](https://zenodo.org/doi/10.5281/zenodo.12794838)
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5f4b65ad57974089b10b5010906a361f)](https://app.codacy.com/gh/lorencig/UA-OPC-Interface/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+
 
 
 # Overview - UA OPC Interface
