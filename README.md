@@ -102,7 +102,7 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
 
     ```shell
-    git clone https://github.com/yourusername/ua-opc-interface.git
+    git clone https://github.com/lorencig/UA-OPC-Interface.git
     cd ua-opc-interface
     ```
 
