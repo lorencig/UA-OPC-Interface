@@ -102,11 +102,11 @@ def run_program():
                 status_label.config(text=f"Error: {e}")
                 break
     status_label.config(text="Program finished")
-    
+
 # Create the main window
 root = tk.Tk()
 root.title("UA OPC Interface")
-icon = tk.PhotoImage(file="brain.png")
+icon = tk.PhotoImage(file="images/brain.png")
 root.iconphoto(True, icon)
 
 # Create status label
@@ -130,25 +130,25 @@ program_table.column("Value", anchor="center")
 program_table.grid(row=1, column=0, columnspan=5, pady=(10, 10), sticky="nsew")
 
 # Load button icons
-pump_icon = tk.PhotoImage(file='pump.png')
+pump_icon = tk.PhotoImage(file='images/pump.png')
 pump_icon_resized = pump_icon.subsample(5, 5)
 
-stop_icon = tk.PhotoImage(file='stop.png')
+stop_icon = tk.PhotoImage(file='images/stop.png')
 stop_icon_resized = stop_icon.subsample(5, 5)
 
-clean_icon = tk.PhotoImage(file='clean.png')
+clean_icon = tk.PhotoImage(file='images/clean.png')
 clean_icon_resized = clean_icon.subsample(5, 5)
 
-empty_icon = tk.PhotoImage(file='empty.png')
+empty_icon = tk.PhotoImage(file='images/empty.png')
 empty_icon_resized = empty_icon.subsample(5, 5)
 
-fill_icon = tk.PhotoImage(file='fill.png')
+fill_icon = tk.PhotoImage(file='images/fill.png')
 fill_icon_resized = fill_icon.subsample(5, 5)
 
-time_icon = tk.PhotoImage(file='time.png')
+time_icon = tk.PhotoImage(file='images/time.png')
 time_icon_resized = time_icon.subsample(5, 5)
 
-submit_icon = tk.PhotoImage(file='submit.png')
+submit_icon = tk.PhotoImage(file='images/submit.png')
 submit_icon_resized = submit_icon.subsample(4, 4)
 
 # Create frames for Pump A and Pump B
