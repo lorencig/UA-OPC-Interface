@@ -6,7 +6,7 @@
 
 # Overview - UA OPC Interface
 
-This application provides a graphical interface to control pumps connected to an OPC UA server. The user can create and execute a sequence of actions for the pumps in a defined order.
+This platform provides a versatile and user-friendly interface for controlling laboratory pumps via OPC UA protocol. Pumps are a critical component in fluidic systems, especially in laboratory-scale applications where precise control of fluid flow is essential. This application is specifically tailored for such applications, allowing users to automate and monitor the operation of pumps with ease and accuracy. The user can create and execute a sequence of actions for the pumps in a defined order. 
 
 ## Features
 
@@ -140,7 +140,7 @@ Before you begin, ensure you have met the following requirements:
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the CC BY 4.0 License - see the LICENSE file for details.
 
 ## Acknowledgments
 
